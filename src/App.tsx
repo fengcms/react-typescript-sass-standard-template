@@ -1,15 +1,18 @@
 import React, { FC } from 'react'
-import { test } from '@/utils/tools'
+import { Route, Router } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+import Home from '@/views/Home'
+import About from '@/views/About'
 const App: FC = () => {
-  test()
   return (
-    <div className="App">
-      <header className="App-header">
-        222 22
-        222 22
-      </header>
-      <div className="xxx">222</div>
-    </div>
+    <Router history={createBrowserHistory()}>
+      <Route path='/' exact>
+        <Home />
+      </Route>
+      <Route path='/about'>
+        <About />
+      </Route>
+    </Router>
   )
 }
 
