@@ -1,0 +1,26 @@
+// base by fungleo
+html {}
+body {
+  color: $BaseC;line-height: 1;
+  font-family:'PingFang SC', 'Heiti SC', 'Droidsansfallback', Helvetica, 'Droid Sans';
+  padding-top: constant(safe-area-inset-top);   //为导航栏+状态栏的高度 88px
+  padding-left: constant(safe-area-inset-left);   //如果未竖屏时为0
+  padding-right: constant(safe-area-inset-right); //如果未竖屏时为0
+  padding-bottom: constant(safe-area-inset-bottom);//为底下圆弧的高度 34px
+}
+// html,body {overflow: hidden;}
+.block {display: block;}
+.none {display:none}
+.clear {clear: both;}
+
+.fl {float: left;}
+.fr {float: right;}
+.tl {text-align: left;}
+.tr {text-align: right;}
+.tc {text-align: center;}
+
+.cf {
+  zoom:1;
+  &:before,&:after {content:"";display:table;}
+  &:after {clear:both;}
+}

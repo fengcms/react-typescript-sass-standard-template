@@ -1,7 +1,7 @@
 const path = require('path')
 const { override, addWebpackAlias } = require('customize-cra')
-function resolve(dir) {
-  return path.join(__dirname, dir)
+function resolve (dir) {
+  return path.resolve(__dirname, dir)
 }
 
 /**
@@ -10,7 +10,7 @@ function resolve(dir) {
  * @param callback: 回调函数，第一个参数为该插件对象
  * @return null
  */
-function invade(target, name, callback) {
+function invade (target, name, callback) {
   target.forEach(
     item => {
       if (item.constructor.name === name) {
@@ -27,7 +27,7 @@ module.exports = {
   },
   webpack: override(
     addWebpackAlias({
-      '@': resolve('src')
+      '@': resolve('./src')
     }),
     config => {
       if (process.env.NODE_ENV === 'production') {

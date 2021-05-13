@@ -2,25 +2,20 @@
   "name": "react-demo",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "PORT=8000 react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "_eject": "react-scripts eject",
+    "style": "node ./src/style/build.js",
+    "watch": "node ./src/style/watch.js"
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
-  },
-  "scripts": {
-    "start": "PORT=8000 react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "_eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -41,7 +36,23 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.0",
     "customize-cra": "^1.0.0",
-    "react-app-rewired": "^2.1.8"
+    "sass": "^1.32.13",
+    "react-app-rewired": "^2.1.8",
+    "@typescript-eslint/eslint-plugin": "^4.11.0",
+    "eslint": "^7.16.0",
+    "eslint-config-standard-with-typescript": "^19.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-standard": "^4.1.0"
   }
 }
