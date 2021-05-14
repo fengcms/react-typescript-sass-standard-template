@@ -6,7 +6,7 @@ interface Props {
   children?: React.ReactElement | React.ReactElement[]
 }
 
-const MobileLayout: FC<Props> = ({ className = '', children }) => {
+const Components: FC<Props> = ({ className = '', children }) => {
   return (
     <div className={classnames('mobile-layout', className)}>
       {children}
@@ -14,4 +14,9 @@ const MobileLayout: FC<Props> = ({ className = '', children }) => {
   )
 }
 
-export default MobileLayout
+export default Components
+
+export const auto = {
+  name: 'MobileLayout',
+  Components
+}

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
 
-import MobileLayout from '@/components/mobile/layout/layout'
+import C from '@/components'
 
 import Home from './Home'
 import About from './About'
@@ -9,7 +9,7 @@ import About from './About'
 const App: FC = () => {
   const { path } = useRouteMatch()
   return (
-    <MobileLayout>
+    <C.MobileLayout>
       <Switch>
         <Route path={`${path}/`}>
           <Home />
@@ -18,7 +18,7 @@ const App: FC = () => {
           <About />
         </Route>
       </Switch>
-    </MobileLayout>
+    </C.MobileLayout>
   )
 }
 

@@ -10,7 +10,7 @@ const Components: FC = () => {
   }
   return (
     <div className="select-lang">
-      <h3>切换语言</h3>
+      <h3>Current Language {languages.find(i => i.value === i18n.language).label}</h3>
       <ul>
         {
           languages.map(({ label, value }) => {
