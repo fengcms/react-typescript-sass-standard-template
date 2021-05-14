@@ -4,7 +4,7 @@ const Home: FC = () => {
   isTest()
   return (
     <div className="App">
-      this is home page
+      this is mobile home page
     </div>
   )
 }

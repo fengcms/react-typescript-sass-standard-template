@@ -1,17 +1,17 @@
 import React, { FC } from 'react'
 import { Route, Router } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
-import Home from '@/views/Home'
-import About from '@/views/About'
+import Mobile from './mobile'
+import Web from './web'
 
 const App: FC = () => {
   return (
     <Router history={createBrowserHistory()}>
       <Route path='/' exact>
-        <Home />
+        <Web />
       </Route>
-      <Route path='/about'>
-        <About />
+      <Route path='/m'>
+        <Mobile />
       </Route>
     </Router>
   )
