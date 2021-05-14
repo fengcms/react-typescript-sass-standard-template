@@ -2,12 +2,11 @@
 // mixins
 
 // 链接动画
-@mixin dz($time:0.25s){
-  -webkit-transition: all $time ease-in-out;
+@mixin dz($time:0.25s) {
   transition: all $time ease-in-out;
 }
 // 文字描边
-@mixin ts($s1:1px,$s2:1px,$color:$cff){
+@mixin ts($s1:1px,$s2:1px,$color:$cff) {
   text-shadow:
   $s1 $s1 $s2 $color,
   -$s1 $s1 $s2 $color,
@@ -15,33 +14,27 @@
   -$s1 (-$s1) $s2 $color;
 }
 //
-@mixin jb($color1:#000,$color2:#fff,$deg:0){
-  background-image:-webkit-linear-gradient($deg+deg, $color2, $color1);
+@mixin jb($color1:#000,$color2:#fff,$deg:0) {
   background-image:linear-gradient($deg+deg, $color2, $color1);
 }
 // 旋转
-@mixin xz($deg:360){
-  -webkit-transform:rotate($deg+deg);
+@mixin xz($deg:360) {
   transform:rotate($deg+deg);
 }
 // 旋转放大
-@mixin xzfd($deg:360,$s1:1.2){
-  -webkit-transform:rotate($deg+deg) scale($s1);
+@mixin xzfd($deg:360,$s1:1.2) {
   transform:rotate($deg+deg) scale($s1);
 }
 // 旋转放大
-@mixin fd($s1:1.2){
-  -webkit-transform:scale($s1);
+@mixin fd($s1:1.2) {
   transform:scale($s1);
 }
 // 移动动画
-@mixin yd($s1:0,$s2:0){
-  -webkit-transform:translate($s1,$s2);
+@mixin yd($s1:0,$s2:0) {
   transform:translate($s1,$s2);
 }
 // 禁止选中
 @mixin ns{
-  -webkit-touch-callout: none;
   user-select: none;
 }
 // 一行文字标题
@@ -54,7 +47,6 @@
 }
 // 计算
 @mixin calc($property, $expression) {
-  #{$property}: -webkit-calc(#{$expression});
   #{$property}: calc(#{$expression});
 }
 @mixin hlh($s1) {
@@ -64,17 +56,10 @@
 }
 
 
-@function rem($px){
+@function rem($px) {
   @return $px * 375 / 75000 + rem;
 }
 
 @mixin gray{
-  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-}
-
-.fix_iphonex {
-  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
-    padding-bottom: rem(34);
-  }
 }

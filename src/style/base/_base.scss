@@ -36,4 +36,15 @@ body {
     padding-bottom: constant(safe-area-inset-bottom);//为底下圆弧的高度 34px
   }
   ::-webkit-scrollbar {width: 0;height: 0;}
+  * {
+    user-select:none;
+  }
+
+  input, textarea {
+    user-select:auto; /*webkit浏览器*/
+  }
+  input[type="password"] {
+    user-select:none;
+  }
+
 }

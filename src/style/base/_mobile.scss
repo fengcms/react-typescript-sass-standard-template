@@ -1,15 +1,4 @@
 .mobile-outer {
-  width: rem(750);
+  width: rem(750);position: relative;
   margin: 0 auto;min-height: 100vh;
-}
-
-* {
-  user-select:none;
-}
-
-input, textarea {
-  user-select:auto; /*webkit浏览器*/
-}
-input[type="password"] {
-  user-select:none;
 }
