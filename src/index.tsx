@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import App from '@/views/App'
 import './style/style.scss'
 import reportWebVitals from './reportWebVitals'
+import '@/lang'
 
 ReactDOM.render(
   <StrictMode>
