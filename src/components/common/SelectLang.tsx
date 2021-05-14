@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 
 import { languages } from '@/lang'
 
-const SelectLang: FC = () => {
+const Components: FC = () => {
   const { i18n } = useTranslation()
   const changelang = (code: string): void => {
     i18n.changeLanguage(code).catch(() => {})
@@ -24,4 +24,9 @@ const SelectLang: FC = () => {
   )
 }
 
-export default SelectLang
+export default Components
+
+export const auto = {
+  name: 'SelectLang',
+  Components
+}

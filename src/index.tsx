@@ -1,14 +1,16 @@
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
+
+import C from '@/components'
 import App from '@/views/App'
-import './style/style.scss'
-import reportWebVitals from './reportWebVitals'
+
+import reportWebVitals from '@/reportWebVitals'
 import '@/lang'
-import SelectLang from '@/components/common/SelectLang'
+import '@/style/style.scss'
 
 ReactDOM.render(
   <StrictMode>
-    <SelectLang />
+    <C.SelectLang />
     <App />
   </StrictMode>,
   document.getElementById('root')
