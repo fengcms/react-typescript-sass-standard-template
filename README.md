@@ -296,7 +296,7 @@ console.log(i18n.t('home', 'Home'))
 
 FungLeo
 
-Blog: https://www.fungleo.com/
+Blog: http://www.fungleo.com/
 
 ## LICENSE
 
