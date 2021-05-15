@@ -7,7 +7,7 @@ import C from '@/components'
 
 // 在普通JS文件中，使用多语言
 import i18n from '@/lang'
-console.log(i18n.t('home'))
+console.log(i18n.t('home.message'))
 
 const Home: FC = () => {
   const { t } = useTranslation()

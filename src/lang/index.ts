@@ -15,18 +15,17 @@ const langs = langsFiles.keys().reduce((langs: {[index: string]: any}, path) => 
 }, {})
 
 export const languages = langItems.sort((a, b) => a.sort - b.sort)
-
 i18n.use(initReactI18next) // init i18next
   .init({
     // 引入资源文件
     resources: langs,
     // 选择默认语言，选择内容为上述配置中的key，即en/zh
-    fallbackLng: 'EN',
+    fallbackLng: 'zh-CN',
     debug: false,
     interpolation: {
       escapeValue: false // not needed for react as it escapes by default
     }
   })
   .catch(() => {})
-
+console.log(i18n)
 export default i18n

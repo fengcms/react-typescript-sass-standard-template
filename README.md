@@ -108,12 +108,12 @@ yarn watch
 ├── lang                      多语言文件夹
 │   ├── index.ts                多语言入口文件
 │   └── languages               多语言配置文件
-│       ├── EN                    英语配置文件夹
+│       ├── en                    英语配置文件夹
 │       │   └── home.ts             英语配置演示文件
-│       ├── EN.ts                 英语配置入口文件
-│       ├── ZH-CN
+│       ├── en.ts                 英语配置入口文件
+│       ├── zh-CN
 │       │   └── home.ts
-│       └── ZH-CN.ts
+│       └── zh-CN.ts
 ├── state                     状态目录，预留
 │   └── README.md
 ├── style                     scss 样式目录
@@ -229,7 +229,7 @@ export default About
 
 ### 增加新语言
 
-在 `@/lang/languages` 文件夹内，参考现有的文件夹以及文件，即可。如要增加 `JP` 日本语，可以新建 `JP` 文件夹和 `JP.ts` 两个文件。然后对 `JP.ts` 配置文件进行微调即可。
+在 `@/lang/languages` 文件夹内，参考现有的文件夹以及文件，即可。如要增加 `jp` 日本语，可以新建 `jp` 文件夹和 `jp.ts` 两个文件。然后对 `jp.ts` 配置文件进行微调即可。
 
 ### 增加新模块
 
