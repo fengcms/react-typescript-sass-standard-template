@@ -12,9 +12,6 @@ const modules = modulesFiles.keys().reduce((modules: {[index: string]: any}, pat
   if (auto?.name != null && auto?.Components != null) {
     modules[auto.name] = auto.Components
   }
-  // if (name != null && Components != null) {
-  //   modules[name] = Components
-  // }
   return modules
 }, {})
 
