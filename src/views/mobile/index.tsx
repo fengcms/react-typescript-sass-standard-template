@@ -1,12 +1,12 @@
-import React, { FC } from 'react'
+import React, { FC, lazy } from 'react'
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
 
 import C from '@/components'
 
-import Home from './Home'
-import About from './About'
+const Home = lazy(async () => await import('./Home'))
+const About = lazy(async () => await import('./About'))
 
-import NotFound from '../NotFound'
+const NotFound = lazy(async () => await import('../NotFound'))
 
 const App: FC = () => {
   const { path } = useRouteMatch()
