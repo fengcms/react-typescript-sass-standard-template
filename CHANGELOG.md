@@ -13,6 +13,7 @@
 2. 使用 Suspense 组件的回退函数实现 Loading
 3. 新增 404 异常处理
 4. 新增变更日志说明文档
+5. 新增单 `tsx` 文件，多组件自动导出功能，参考 `src/components/mobile/layout/Flex.tsx` 演示文件
 
 ## 2021-05-14
 
