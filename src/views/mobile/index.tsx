@@ -8,10 +8,11 @@ import About from './About'
 
 const App: FC = () => {
   const { path } = useRouteMatch()
+  console.log(path)
   return (
     <C.MobileLayout>
       <Switch>
-        <Route path={`${path}/`}>
+        <Route path={`${path}/`} exact>
           <Home />
         </Route>
         <Route path={`${path}/about`}>

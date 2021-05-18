@@ -1,11 +1,15 @@
 import React, { FC } from 'react'
 import C from '@/components'
 
+import { Flex } from '@/components/mobile/layout/Flex'
+
 const About: FC = () => {
   return (
     <div className="App">
       this is about page
-      <C.WebHomeCount />
+      <Flex>
+        <C.WebHomeCount />
+      </Flex>
     </div>
   )
 }

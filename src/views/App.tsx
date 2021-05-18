@@ -1,18 +1,17 @@
 import React, { FC } from 'react'
-import { Route, Router } from 'react-router-dom'
-import { createBrowserHistory } from 'history'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import Mobile from './mobile'
 import Web from './web'
 
 const App: FC = () => {
   return (
-    <Router history={createBrowserHistory()}>
-      <Route path='/' exact>
+    <Router>
+      <Switch>
+        <Route path='/m/'>
+          <Mobile />
+        </Route>
         <Web />
-      </Route>
-      <Route path='/m'>
-        <Mobile />
-      </Route>
+      </Switch>
     </Router>
   )
 }

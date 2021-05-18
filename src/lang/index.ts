@@ -27,5 +27,4 @@ i18n.use(initReactI18next) // init i18next
     }
   })
   .catch(() => {})
-console.log(i18n)
 export default i18n
