@@ -1,18 +1,36 @@
-import React, { FC } from 'react'
+import React, { FC, lazy, Suspense } from 'react'
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
-import Mobile from './mobile'
-import Web from './web'
+
+import Loading from './Loading'
+
+const Home = lazy(async () => await import('./web/Home'))
+const About = lazy(async () => await import('./web/About'))
+
+const Mobile = lazy(async () => await import('./mobile'))
+
+const NotFound = lazy(async () => await import('./NotFound'))
 
 const App: FC = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path='/m/'>
-          <Mobile />
-        </Route>
-        <Web />
-      </Switch>
-    </Router>
+    <Suspense fallback={<Loading />}>
+      <Router>
+        <Switch>
+          {/* PC端 */}
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          {/* 移动端 */}
+          <Route path='/m'>
+            <Mobile />
+          </Route>
+          {/* 404 */}
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
+    </Suspense>
   )
 }
 
