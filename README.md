@@ -28,6 +28,10 @@ yarn
 # 运行项目 (默认运行于 8000 端口，可在 package.json 文件中修改)
 yarn start
 
+# 运行项目 windows 系统
+# 由于 windows 系统设置端口命令比较特殊，因此拆成了独立命令
+yarn start:win
+
 # 测试命令
 yarn test
 

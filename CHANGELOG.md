@@ -1,5 +1,11 @@
 # 项目变更统计文档
 
+## 2021-05-19
+
+### Bug Fixes
+
+1. 新增 `yarn start:win` 命令，解决项目在 Windows 系统启动报错的BUG
+
 ## 2021-05-18
 
 ### Bug Fixes
