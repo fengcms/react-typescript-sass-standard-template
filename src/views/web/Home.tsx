@@ -15,6 +15,7 @@ const Home: FC = () => {
 
   return (
     <div className="App">
+      <div className="logo" />
       this is web home page12 <Link to="/about">about</Link>
       <br/>
       <C.WebHomeCount />
